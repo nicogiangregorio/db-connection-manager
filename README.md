@@ -11,13 +11,14 @@ This project contains only 1, very short java class.
 To configure and test the correctness of code within a java web application based on tomcat, 
 you should add the following lines to your web.xml file (assuming the jndi resource is 'jdbc/postgres'):
 
-
+[code]
 <resource-ref>
   	<description>postgreSQL Datasource example</description>
 		<res-ref-name>jdbc/postgres</res-ref-name>
 		<res-type>javax.sql.DataSource</res-type>
 		<res-auth>Container</res-auth>
 </resource-ref>
+[/code]
 
 Put the wolloeing code inside the contex.xml file:
 
