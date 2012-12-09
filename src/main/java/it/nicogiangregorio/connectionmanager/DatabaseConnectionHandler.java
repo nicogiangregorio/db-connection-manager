@@ -13,9 +13,9 @@ public class DatabaseConnectionHandler {
 
 	static {
 		try {
-			dataSource = (DataSource) new InitialContext().lookup("jndifordbconc");
+			dataSource = (DataSource) new InitialContext().lookup("java:/comp/env/jdbc/postgres");
 		} catch (NamingException e) {
-			throw new ExceptionInInitializerError("'jndifordbconc' not found in JNDI");
+			throw new ExceptionInInitializerError("'java:/comp/env/jdbc/postgres' not found in JNDI");
 		}
 	}
 
